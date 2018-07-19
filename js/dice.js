@@ -8,8 +8,10 @@ $(document).ready(function(){
     var rolled=Math.floor(Math.random() * (max - min + 1));
       if (rolled===0) {
       alert(rolled +"," + "YOU ROLLED A ZERO...ROLL AGAIN")
-    }else if (rolled===1) {
-      alert("player 1, You rolled a 1 niccur your turn is over pass the mouse")
+    }else if (rolled===2) {
+          $("#player1").hide(400);
+          $("#player2").show(1200);
+          alert("player 1, You rolled a 1 niccur your turn is over pass the mouse")
     }else {
         $("p#roll1").prepend("<li>" + rolled + "</li>");
 
