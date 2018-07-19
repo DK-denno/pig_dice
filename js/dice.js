@@ -24,8 +24,16 @@ $(document).ready(function(){
 //      var score=rolled++rolled
 //    alert("your score is " + score);
 
+if (p1rollCounter===5) {
+  $("#player1").hide(400);
+  $("#player2").show(1200);
+  alert("NEXT PLAYER");
+};
+
   });
+
 });
+
 
   var player2Score=0;
   var p2rollCounter=0;
