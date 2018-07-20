@@ -44,16 +44,17 @@ $(document).ready(function(){
 
     var rolled1=Math.floor(Math.random() * (top - less))+1;
 //confirmational test of the .random()function    alert(rolled1);
-    if (rolled1===0) {
-      alert(rolled1 +"," + "YOU ROLLED A ZERO...ROLL AGAIN")
+    //if //(rolled1===0) {
+      //alert(rolled1 +"," + "YOU ROLLED A ZERO...ROLL AGAIN")
 
-    }else if (rolled1===1) {
+    //}else
+     if (rolled1===1) {
           $("#player2").hide(4000);
           $("#player1").show();
           alert("player 1, You rolled a 1 niccur your turn is over pass the mouse")
 
     }else {
-      $("p#roll2").prepend("<li>" + rolled1 + "</li>")
+      $("p#roll2").text(rolled1)
 
     }
     //score=current roll + 0/previous roll/sum of previous rolls
@@ -77,3 +78,4 @@ $(document).ready(function(){
 }
   });
 });
+})
