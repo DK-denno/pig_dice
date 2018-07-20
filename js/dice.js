@@ -4,9 +4,9 @@ var player1Score=0;
 $(document).ready(function(){
   $("#roll1").click(function(event){
     var min=1;
-    var max=6;
+    var max=7;
 //math function to display random numbers
-    var rolled=Math.floor(Math.random() * (max - min + 1));
+    var rolled=Math.floor(Math.random() * (max - min))+1;
       if (rolled===0) {
       alert(rolled +"," + "YOU ROLLED A ZERO...ROLL AGAIN")
     }else if (rolled===1) {
@@ -14,7 +14,7 @@ $(document).ready(function(){
            $("#player2").show();
           alert("player 1, You rolled a 1 niccur your turn is over pass the mouse")
     }else {
-        $("p#roll1").prepend("<li>" + rolled + "</li>");
+        $("p#roll1").text(rolled);
 
         player1Score=player1Score+parseInt(rolled);
         P1rollCounter=P1rollCounter+=1;
@@ -40,20 +40,21 @@ $(document).ready(function(){
 $(document).ready(function(){
   $("#roll2").click(function(event){
     var less=1;
-    var top= 6;
+    var top= 7;
 
-    var rolled1=Math.floor(Math.random() * (top - less + 1));
+    var rolled1=Math.floor(Math.random() * (top - less))+1;
 //confirmational test of the .random()function    alert(rolled1);
-    if (rolled1===0) {
-      alert(rolled1 +"," + "YOU ROLLED A ZERO...ROLL AGAIN")
+    //if //(rolled1===0) {
+      //alert(rolled1 +"," + "YOU ROLLED A ZERO...ROLL AGAIN")
 
-    }else if (rolled1===1) {
+    //}else
+     if (rolled1===1) {
           $("#player2").hide(4000);
           $("#player1").show();
           alert("player 1, You rolled a 1 niccur your turn is over pass the mouse")
 
     }else {
-      $("p#roll2").prepend("<li>" + rolled1 + "</li>")
+      $("p#roll2").text(rolled1)
 
     }
     //score=current roll + 0/previous roll/sum of previous rolls
@@ -65,3 +66,16 @@ $(document).ready(function(){
 
   });
 });
+$(document).ready(function(){
+  $("#roll1").click(function(event){
+  if (player1Score>=100) {
+    alert("WINNER");
+    alert("PLAYER 2 SUCKS");
+
+  }else if (player2Score>=100) {
+        alert("WINNER");
+        alert("PLAYER 1 SUCKS");
+}
+  });
+});
+})
