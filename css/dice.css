@@ -1,0 +1,26 @@
+#content{
+  margin-left: 400px;
+  margin-top: 30px;
+
+}
+h6{
+  font-size: 100px;
+  font-family: serif;
+  margin-left: 300px;
+
+}
+#submit{
+  border-color: #ffa500;
+  background-color: blue;
+  border-width: thick;
+  padding-left: 50px;
+  padding-right: 50px;
+
+}
+.f1{
+  border-width: thick;
+  border-style: ridge;
+}
+#player2{
+  display:none;
+}
