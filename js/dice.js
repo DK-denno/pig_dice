@@ -65,3 +65,15 @@ $(document).ready(function(){
 
   });
 });
+$(document).ready(function(){
+  $("#roll1").click(function(event){
+  if (player1Score>=100) {
+    alert("WINNER");
+    alert("PLAYER 2 SUCKS");
+
+  }else if (player2Score>=100) {
+        alert("WINNER");
+        alert("PLAYER 1 SUCKS");
+}
+  });
+});
