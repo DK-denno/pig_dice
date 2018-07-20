@@ -24,3 +24,16 @@ h6{
 #player2{
   display:none;
 }
+body{
+  background-image: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&h=350');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#player1{
+  margin-left: 400px;
+}
+
+#player2{
+  margin-left: 400px;
+}

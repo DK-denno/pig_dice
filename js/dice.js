@@ -10,8 +10,8 @@ $(document).ready(function(){
       if (rolled===0) {
       alert(rolled +"," + "YOU ROLLED A ZERO...ROLL AGAIN")
     }else if (rolled===1) {
-           $("#player1").hide(400);
-           $("#player2").show(1200);
+           $("#player1").hide(4000);
+           $("#player2").show();
           alert("player 1, You rolled a 1 niccur your turn is over pass the mouse")
     }else {
         $("p#roll1").prepend("<li>" + rolled + "</li>");
@@ -24,11 +24,11 @@ $(document).ready(function(){
 //      var score=rolled++rolled
 //    alert("your score is " + score);
 
-if (p1rollCounter===5) {
-  $("#player1").hide(400);
-  $("#player2").show(1200);
-  alert("NEXT PLAYER");
-};
+// if (p1rollCounter===5) {
+//   $("#player1").hide(400);
+//   $("#player2").show(1200);
+//   alert("NEXT PLAYER");
+// };
 
   });
 
@@ -48,9 +48,9 @@ $(document).ready(function(){
       alert(rolled1 +"," + "YOU ROLLED A ZERO...ROLL AGAIN")
 
     }else if (rolled1===1) {
-       $("#player1").show(1200);
-      $("#player2").hide(400);
-      alert("player 1, You rolled a 1 niccur your turn is over pass the mouse")
+          $("#player2").hide(4000);
+          $("#player1").show();
+          alert("player 1, You rolled a 1 niccur your turn is over pass the mouse")
 
     }else {
       $("p#roll2").prepend("<li>" + rolled1 + "</li>")
