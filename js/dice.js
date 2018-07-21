@@ -68,6 +68,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
   $("#roll1").click(function(event){
+    var winner=$("#winner");
   if (player1Score>=100) {
     alert("WINNER");
     alert("PLAYER 2 SUCKS");
@@ -78,4 +79,13 @@ $(document).ready(function(){
 }
   });
 });
-})
+$(document).ready(function(){
+  $("#pass").click(function(event){
+    $("#player1").hide(4000);
+    $("#player2").show();
+  });
+  $('#pass2').click(function(event){
+    $("#player2").hide(4000);
+    $("#player1").show();
+  });
+});
